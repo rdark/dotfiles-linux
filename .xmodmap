@@ -1,0 +1,77 @@
+! This is an xmodmap input file for the Happy Hacking Keyboard, model HHKB Lite/Pro 2. It assumes that the
+! keymap is already set up for a gb-105 keyboard, then applies fixes for arrow keys and British conventions
+! I prefer to have the diamond and alt keys swapped using the SW5 dipswitch turned on
+!
+! This file makes the following changes:
+!
+! Fix the arrow keys
+!
+keycode 111 = Up
+keycode 116 = Down
+keycode 113 = Left
+keycode 114 = Right
+!
+! Fix the Fn-Arrows to give PgUp, PgDown, Home and End
+!
+keycode 112 = Prior
+keycode 117 = Next
+keycode 110 = Home
+keycode 115 = End
+!
+! Fix the Alt and Diamond keys
+!
+keycode 133 = Super_L
+keycode 134 = Mode_switch
+keycode 64 = Alt_L
+keycode 108 = Alt_R
+!
+! Put the @ on shift-' as British keyboards do
+!
+keycode 48 = apostrophe at
+!
+! Put the " on shift-2 as British keyboards do
+!
+keycode 11 = 2 quotedbl
+!
+! Put the Pound symbol on right-diamond-3
+!
+keycode 12 = 3 numbersign sterling sterling
+!
+! Put the Euro symbol on right-diamond-e
+!
+keycode 26 = e E EuroSign
+!
+! Fix tilde
+!
+keycode 49 = grave asciitilde
+!
+! Fix backslash
+!
+keycode 51 = backslash bar
+!
+!
+! Remove all the existing modifier key mappings
+!
+clear Shift
+clear Lock
+clear Control
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+clear Mod5
+!
+! Put the modifier key mappings back
+!
+add Shift = Shift_L Shift_R
+add Lock = Caps_Lock
+add Control = Control_L Control_R
+!
+! including this line which makes both Alt keys and the left diamond key act as Alt keys
+!
+add Mod1 = Alt_L Alt_R Super_L
+!
+! makes the right diamond acts as the Mode_switch modifier (mapped to right diamond above)
+!
+add Mod3 = Mode_switch
+add Mod5 = Scroll_Lock
