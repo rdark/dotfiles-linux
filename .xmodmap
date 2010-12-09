@@ -49,6 +49,10 @@ keycode 49 = grave asciitilde
 !
 keycode 51 = backslash bar
 !
+! Fix FN-Backspace = delete (when swap via DIP SW 2 ?)
+!
+keycode 77 = Delete
+!
 !
 ! Remove all the existing modifier key mappings
 !
