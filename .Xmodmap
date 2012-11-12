@@ -1,8 +1,10 @@
-! This is an xmodmap input file for the Happy Hacking Keyboard, model HHKB Lite/Pro 2. It assumes that the
-! keymap is already set up for a gb-105 keyboard, then applies fixes for arrow keys and British conventions
-! I prefer to have the diamond and alt keys swapped using the SW5 dipswitch turned on
+! This is an xmodmap input file for the Happy Hacking Keyboard, model HHKB
+! Lite/Pro 2. It assumes that the keymap is already set up for a gb-105
+! keyboard, then applies fixes for arrow keys and British conventions
 !
-! This file makes the following changes:
+! I generally prefer to have the diamond and alt keys swapped using the SW5
+! dipswitch turned on - anything referring to "alt" means the key printed as
+! alt, but are actually not ever used as that.
 !
 ! Fix the arrow keys
 !
@@ -21,23 +23,26 @@ keycode 115 = End
 ! Fix the Alt and Diamond keys
 !
 keycode 133 = Super_L
-keycode 134 = Mode_switch
 keycode 64 = Alt_L
 keycode 108 = Alt_R
 !
-! Put the @ on shift-' as British keyboards do
+! Put Mode_switch on left "alt"
+!
+keycode 102 = Mode_switch
+!
+! Put the @ on shift + ' as British keyboards do
 !
 keycode 48 = apostrophe at
 !
-! Put the " on shift-2 as British keyboards do
+! Put the " on shift - 2 as British keyboards do
 !
 keycode 11 = 2 quotedbl
 !
-! Put the Pound symbol on right-diamond-3
+! Put the Pound (sterling) symbol on Mode_switch + 3
 !
 keycode 12 = 3 numbersign sterling sterling
 !
-! Put the Euro symbol on right-diamond-e
+! Put the Euro symbol on Mode_switch + 3
 !
 keycode 26 = e E EuroSign
 !
@@ -52,8 +57,7 @@ keycode 51 = backslash bar
 ! Fix FN-Backspace = delete (when swap via DIP SW 2 ?)
 !
 keycode 77 = Delete
-!
-!
+!  !
 ! Remove all the existing modifier key mappings
 !
 clear Shift
@@ -73,9 +77,15 @@ add Control = Control_L Control_R
 !
 ! including this line which makes both Alt keys and the left diamond key act as Alt keys
 !
-add Mod1 = Alt_L Alt_R Super_L
+! Super_L
+add Mod1 = Alt_L Alt_R 
 !
-! makes the right diamond acts as the Mode_switch modifier (mapped to right diamond above)
+! makes the right diamond acts as the Mode_switch modifier (mapped to right
+! diamond above)
 !
 add Mod3 = Mode_switch
 add Mod5 = Scroll_Lock
+!
+! Mod4 usually maps to the super/windows key
+!
+add Mod4 = Henkan_Mode
