@@ -38,11 +38,11 @@ keycode 48 = apostrophe at
 !
 keycode 11 = 2 quotedbl
 !
-! Put the Pound (sterling) symbol on Mode_switch + 3
+! Put the Pound (sterling) symbol on Mode_switch + shift + 3
 !
 keycode 12 = 3 numbersign sterling sterling
 !
-! Put the Euro symbol on Mode_switch + 3
+! Put the Euro symbol on Mode_switch + shift + e
 !
 keycode 26 = e E EuroSign
 !
