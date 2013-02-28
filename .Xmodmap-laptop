@@ -1,0 +1,7 @@
+! Xmodmap for local x220 keyboard
+!
+! Get rid of CAPS LOCK, make into left-ctrl
+!
+remove Lock = Caps_Lock
+keysym Caps_Lock = Control_L
+add Control = Control_L
